@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+      "@simpleview/sv-graphql-client": "^3.0.13"
+    }
+  }
+  
