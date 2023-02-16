@@ -6,8 +6,8 @@ class TrainingPrefix {
         this.name = "training";
         this._graphUrl = graphUrl;
         this._graphServer = graphServer;
-        this._movies = new Movies({graphUrl,graphServer});
-        this._people = new People({graphUrl,graphServer});
+        this.movies = new Movies({graphUrl,graphServer});
+        this.people = new People({graphUrl,graphServer});
     }
 }
 
