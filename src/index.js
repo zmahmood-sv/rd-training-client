@@ -1,6 +1,4 @@
-const prefix = require('./prefixes/trainingprefix');
-const movies = require('./prefixes/collections/Movies')
-const people = require('./prefixes/collections/People')
+const TrainingPrefix = require('./prefixes/TrainingPrefix');
 
 
-module.exports = {prefix,movies,people};
+module.exports = TrainingPrefix;

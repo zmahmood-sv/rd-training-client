@@ -28,9 +28,11 @@ class Movies {
         param: input
       },
       url: this._graphurl,
-      headers
+      headers,
+      clean: true
+
     });
-    nullToUndefined(data);
+    return data;
   }
 
   async remove({ input, context, fields, headers }) {
@@ -49,10 +51,12 @@ class Movies {
         param: input
       },
       url: this._graphurl,
-      headers
+      headers,
+      clean: true
+
 
     });
-    nullToUndefined(data);
+    return data;
   }
 
   async insert({ input, context, fields, headers }) {
@@ -71,10 +75,12 @@ class Movies {
         param: input
       },
       url: this._graphurl,
-      headers
+      headers,
+      clean: true
+
 
     });
-    nullToUndefined(data);
+    return data;
   }
 }
 
