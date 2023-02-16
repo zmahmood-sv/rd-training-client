@@ -1,5 +1,4 @@
 class Movies {
-
     static graphUrl;
     static graphServer
     constructor(graphUrl, graphServer) {

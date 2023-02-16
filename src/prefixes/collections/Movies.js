@@ -1,13 +1,13 @@
-const { query } = require("@simpleview/sv-graphql-client");
+const { query, nullToUndefined } = require("@simpleview/sv-graphql-client");
 
 class Movies {
 
   static _graphUrl;
   static _graphServer
-  constructor(args) {
+  constructor({ graphUrl, graphServer }) {
     this.name = "training";
-    this._graphurl = args.graphUrl;
-    this._graphServer = args.graphServer;
+    this._graphurl = graphUrl;
+    this._graphServer = graphServer;
   }
 
 
@@ -30,7 +30,7 @@ class Movies {
       url: this._graphurl,
       headers
     });
-    return data || undefined;
+    nullToUndefined(data);
   }
 
   async remove({ input, context, fields, headers }) {
@@ -52,7 +52,7 @@ class Movies {
       headers
 
     });
-    return data || undefined;
+    nullToUndefined(data);
   }
 
   async insert({ input, context, fields, headers }) {
@@ -74,7 +74,7 @@ class Movies {
       headers
 
     });
-    return data || undefined;
+    nullToUndefined(data);
   }
 }
 
