@@ -1,9 +1,6 @@
 const { query, nullToUndefined } = require("@simpleview/sv-graphql-client");
 
 class Movies {
-
-  static _graphUrl;
-  static _graphServer
   constructor({ graphUrl, graphServer }) {
     this.name = "training";
     this._graphurl = graphUrl;
