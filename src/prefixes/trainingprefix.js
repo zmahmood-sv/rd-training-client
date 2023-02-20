@@ -11,4 +11,4 @@ class TrainingPrefix {
     }
 }
 
-module.exports = TrainingPrefix;
+module.exports = {TrainingPrefix};

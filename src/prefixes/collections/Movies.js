@@ -81,4 +81,4 @@ class Movies {
   }
 }
 
-module.exports = Movies;
+module.exports = {Movies};

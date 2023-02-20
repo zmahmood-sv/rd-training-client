@@ -79,4 +79,4 @@ class People {
     }
 }
 
-module.exports = People;
+module.exports = {People};
