@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "Zeshan Mahmood <zeshan.mahmood@simpleviewinc.com>",
+  "main":"src/index.js",
   "dependencies": {
     "@simpleview/sv-graphql-client": "3.0.13"
   }
+
 }
