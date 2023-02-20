@@ -1,5 +1,5 @@
-const Movies = require('./collections/Movies');
-const People = require('./collections/People');
+const {Movies} = require('./collections/Movies');
+const {People} = require('./collections/People');
 
 class TrainingPrefix {
     constructor(graphUrl, graphServer) {
