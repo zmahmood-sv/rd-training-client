@@ -9,7 +9,6 @@ class Movies {
 
 
   async find({ input, context, fields, headers }) {
-    console.log(input)
     
     const data = await query({
       query: `
