@@ -9,7 +9,7 @@ class Movies {
 
 
   async find({ input, context, fields, headers }) {
-    context = context || this._graphServer.context
+    
     const { data } = await query({
       query: `
             query Docs ($param:training_movies_find_param!){
@@ -33,7 +33,7 @@ class Movies {
   }
 
   async remove({ input, context, fields, headers }) {
-    context = context || this._graphServer.context
+    
     const { data } = await query({
       query: `
             mutation training($param:training_movies_remove_input){
@@ -57,7 +57,7 @@ class Movies {
   }
 
   async insert({ input, context, fields, headers }) {
-    context = context || this._graphServer.context
+    
     const { data } = await query({
       query: `
             mutation training($param:[training_movies_insert!]!){

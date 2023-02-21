@@ -9,7 +9,7 @@ class People {
 
 
     async find({ input, context, fields, headers }) {
-        context = context || this._graphServer.context
+        
         const { data } = await query({
             query: `
             query training($findId:training_people_find_param!){
@@ -33,7 +33,7 @@ class People {
     }
 
     async remove({ input, context, fields, headers }) {
-        context = context || this._graphServer.context
+        
         const { data } = await query({
             query: `
             mutation training($param:training_people_remove_input){
@@ -56,7 +56,7 @@ class People {
     }
 
     async insert({ input, context, fields, headers }) {
-        context = context || this._graphServer.context
+        
         const { data } = await query({
             query: `
             mutation Insert($people: [training_people_insert!]!){
