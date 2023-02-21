@@ -2,7 +2,7 @@ const { query } = require("@simpleview/sv-graphql-client");
 class People {
 
     constructor({ graphUrl, graphServer }) {
-        this.name = "training";
+        this.name = "People";
         this._graphurl = graphUrl;
         this._graphServer = graphServer;
     }
