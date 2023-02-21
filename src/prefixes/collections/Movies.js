@@ -35,7 +35,7 @@ class Movies {
 
   async remove({ input, context, fields, headers }) {
     
-    const { data } = await query({
+    const data = await query({
       query: `
             mutation training($param:training_movies_remove_input){
               training{
@@ -59,7 +59,7 @@ class Movies {
 
   async insert({ input, context, fields, headers }) {
     
-    const { data } = await query({
+    const data = await query({
       query: `
             mutation training($param:[training_movies_insert!]!){
                 training{
