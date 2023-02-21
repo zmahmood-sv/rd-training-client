@@ -11,7 +11,7 @@ class Movies {
   async find({ input, context, fields, headers }) {
     console.log(input)
     
-    const { data } = await query({
+    const data = await query({
       query: `
             query Docs ($param:training_movies_find_param!){
                 training{
