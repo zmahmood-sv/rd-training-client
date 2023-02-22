@@ -9,8 +9,8 @@ class People {
 
 
     async find({ input, context, fields, headers }) {
-        
-        const data = await query({
+
+        return await query({
             query: `
             query training($findId:training_people_find_param!){
                 training{
@@ -29,12 +29,12 @@ class People {
             clean: true
 
         });
-        return data;
+
     }
 
     async remove({ input, context, fields, headers }) {
-        
-        const data = await query({
+
+        return await query({
             query: `
             mutation training($param:training_people_remove_input){
                 training{
@@ -52,12 +52,12 @@ class People {
             clean: true
 
         });
-        return data;
+
     }
 
     async insert({ input, context, fields, headers }) {
-        
-        const data = await query({
+
+        return await query({
             query: `
             mutation Insert($people: [training_people_insert!]!){
                 training {
@@ -75,8 +75,8 @@ class People {
             clean: true
 
         });
-        return data;
+
     }
 }
 
-module.exports = {People};
+module.exports = { People };

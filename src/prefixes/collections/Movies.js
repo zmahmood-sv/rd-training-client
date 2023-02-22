@@ -9,8 +9,8 @@ class Movies {
 
 
   async find({ input, context, fields, headers }) {
-    
-    const data = await query({
+
+    return await query({
       query: `
             query Docs ($param:training_movies_find_param!){
                 training{
@@ -29,12 +29,12 @@ class Movies {
       clean: true
 
     });
-    return data;
+
   }
 
   async remove({ input, context, fields, headers }) {
-    
-    const data = await query({
+
+    return await query({
       query: `
             mutation training($param:training_movies_remove_input){
               training{
@@ -53,12 +53,12 @@ class Movies {
 
 
     });
-    return data;
+
   }
 
   async insert({ input, context, fields, headers }) {
-    
-    const data = await query({
+
+    return await query({
       query: `
             mutation training($param:[training_movies_insert!]!){
                 training{
@@ -77,8 +77,8 @@ class Movies {
 
 
     });
-    return data;
+
   }
 }
 
-module.exports = {Movies};
+module.exports = { Movies };
