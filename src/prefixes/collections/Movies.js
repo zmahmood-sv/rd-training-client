@@ -9,7 +9,7 @@ class Movies {
 
 
   async find({ input, context, fields, headers }) {
-    const docs = await query({
+    return await query({
       query: `
             query Docs ($param:training_movies_find_param!){
                 training{
@@ -30,8 +30,6 @@ class Movies {
 
 
     });
-
-    return {docs:[docs]}
   }
 
 
