@@ -26,7 +26,8 @@ class People {
             },
             url: this._graphurl,
             headers,
-            clean: true
+            clean: true,
+            key: "training.people_find",
 
         });
 
@@ -49,7 +50,8 @@ class People {
             },
             url: this._graphurl,
             headers,
-            clean: true
+            clean: true,
+            key: "training.people_remove",
 
         });
 
@@ -72,7 +74,8 @@ class People {
             },
             url: this._graphurl,
             headers,
-            clean: true
+            clean: true,
+            key: "training.people_insert",
 
         });
 
