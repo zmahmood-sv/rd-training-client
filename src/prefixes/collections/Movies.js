@@ -25,12 +25,15 @@ class Movies {
       },
       url: this._graphurl,
       headers,
-      clean: true
+      clean: true,
+      key: "training.movies_find",
+
 
     });
 
     return {docs:[docs]}
   }
+
 
   async remove({ input, context, fields, headers }) {
 
@@ -49,9 +52,8 @@ class Movies {
       },
       url: this._graphurl,
       headers,
-      clean: true
-
-
+      clean: true,
+      key: "training.movies_remove",
     });
 
   }
@@ -73,9 +75,8 @@ class Movies {
       },
       url: this._graphurl,
       headers,
-      clean: true
-
-
+      clean: true,
+      key: "training.movies_insert",
     });
 
   }
