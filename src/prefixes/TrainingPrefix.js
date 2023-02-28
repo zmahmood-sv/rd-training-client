@@ -15,7 +15,7 @@ class TrainingPrefix {
             query: `
 				mutation{
 					training {
-						tests_setup {
+						training_test_data_entry {
 							success,
 							message
 						}
@@ -31,7 +31,7 @@ class TrainingPrefix {
             query: `
 				mutation {
 					training {
-						tests_clear {
+						Training_test_data_removal {
 							success,
 							message
 						}
