@@ -9,9 +9,10 @@ class Movies {
 
 
   async find({ input, context, fields, headers }) {
+
     return await query({
       query: `
-            query Docs ($param:training_movies_find_param!){
+            query Docs ($param:training_movies_find_param){
                 training{
                   movies_find(param:$param){
                    ${fields}
