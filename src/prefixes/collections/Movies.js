@@ -38,7 +38,7 @@ class Movies {
 
     return await query({
       query: `
-            mutation training($param:training_movies_remove_input){
+            mutation training($param:training_remove_input){
               training{
                 movies_remove(input:$param){
                   ${fields}

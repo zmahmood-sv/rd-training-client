@@ -1,12 +1,10 @@
 const { query } = require("@simpleview/sv-graphql-client");
 class People {
-
     constructor({ graphUrl, graphServer }) {
         this.name = "People";
         this._graphurl = graphUrl;
         this._graphServer = graphServer;
     }
-
 
     async find({ input, context, fields, headers }) {
 
@@ -18,9 +16,7 @@ class People {
                         ${fields}
                     }
                 }
-            }	
-              
-            `,
+            }`,
             variables: {
                 param: input
             },
@@ -78,7 +74,6 @@ class People {
             key: "training.people_insert",
 
         });
-
     }
 }
 
