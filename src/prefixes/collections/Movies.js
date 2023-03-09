@@ -22,7 +22,7 @@ class Movies {
               
             `,
       variables: {
-        param: input
+        input
       },
       url: this._graphurl,
       headers,
@@ -47,7 +47,7 @@ class Movies {
             }	
             `,
       variables: {
-        param: input
+        input
       },
       url: this._graphurl,
       headers,
@@ -70,7 +70,7 @@ class Movies {
               }	
             `,
       variables: {
-        param: input
+        input
       },
       url: this._graphurl,
       headers,

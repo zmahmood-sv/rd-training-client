@@ -12,7 +12,7 @@ class People {
             query: `
             query training($findId:training_people_find_param){
                 training{
-                      people_find(param:$findId){
+                      people_find(param:$param){
                         ${fields}
                     }
                 }
@@ -59,7 +59,7 @@ class People {
             query: `
             mutation Insert($people: [training_people_insert!]!){
                 training {
-                  people_insert(people: $people){
+                  people_insert(input: $param){
                     ${fields}   
                   }
                 }
