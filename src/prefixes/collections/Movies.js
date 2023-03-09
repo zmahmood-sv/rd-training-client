@@ -14,7 +14,7 @@ class Movies {
       query: `
             query Docs ($param:training_movies_find_param){
                 training{
-                  movies_find(param:$param){
+                  movies_find(input:$input){
                    ${fields}
                   }
                 }
@@ -63,7 +63,7 @@ class Movies {
       query: `
             mutation training($param:[training_movies_insert!]!){
                 training{
-                  movies_insert(movies:$param){
+                  movies_insert(input:$input){
                     ${fields}
                   }
                 }
