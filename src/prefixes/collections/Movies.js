@@ -12,7 +12,7 @@ class Movies {
 
     return await query({
       query: `
-            query Docs ($param:training_movies_find_param){
+            query Docs ($input:training_movies_find_param){
                 training{
                   movies_find(input:$input){
                    ${fields}
@@ -38,9 +38,9 @@ class Movies {
 
     return await query({
       query: `
-            mutation training($param:training_movies_remove_input){
+            mutation training($input:training_movies_remove_input){
               training{
-                movies_remove(input:$param){
+                movies_remove(input:$input){
                   ${fields}
                 }
               }
@@ -61,7 +61,7 @@ class Movies {
 
     return await query({
       query: `
-            mutation training($param:[training_movies_insert!]!){
+            mutation training($input:[training_movies_insert!]!){
                 training{
                   movies_insert(input:$input){
                     ${fields}

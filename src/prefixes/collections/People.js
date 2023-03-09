@@ -10,15 +10,15 @@ class People {
 
         return await query({
             query: `
-            query training($findId:training_people_find_param){
+            query training($input:training_people_find_param){
                 training{
-                      people_find(param:$param){
+                      people_find(input:$input){
                         ${fields}
                     }
                 }
             }`,
             variables: {
-                param: input
+             input
             },
             url: this._graphurl,
             headers,
@@ -33,16 +33,16 @@ class People {
 
         return await query({
             query: `
-            mutation training($param:training_people_remove_input){
+            mutation training($input:training_people_remove_input){
                 training{
-                      people_remove(input:$param){
+                      people_remove(input:$input){
                           ${fields}
                       }
                   }
               }	
             `,
             variables: {
-                param: input
+                input
             },
             url: this._graphurl,
             headers,
@@ -57,16 +57,16 @@ class People {
 
         return await query({
             query: `
-            mutation Insert($people: [training_people_insert!]!){
+            mutation Insert($input: [training_people_insert!]!){
                 training {
-                  people_insert(input: $param){
+                  people_insert(input: $input){
                     ${fields}   
                   }
                 }
               }
             `,
             variables: {
-                param: input
+             input
             },
             url: this._graphurl,
             headers,
