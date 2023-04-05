@@ -6,14 +6,14 @@ class People {
 		this._graphServer = graphServer;
 	}
 
-	async find({ input, context, fields, headers }) {
+	async find({ input, fields, headers }) {
 
 		return await query({
 			query: `
-			query training($findId:training_people_find_param){
+			query training($findId:training_people_find_input){
 				training{
 						people_find(param:$findId){
-						${fields}
+						${ fields }
 					}
 				}
 			}`,
@@ -29,14 +29,14 @@ class People {
 
 	}
 
-	async remove({ input, context, fields, headers }) {
+	async remove({ input, fields, headers }) {
 
 		return await query({
 			query: `
 			mutation training($param:training_people_remove_input){
 				training{
 					people_remove(input:$param){
-						${fields}
+						${ fields }
 					}
 				}
 			}	
@@ -53,14 +53,14 @@ class People {
 
 	}
 
-	async insert({ input, context, fields, headers }) {
+	async insert({ input, fields, headers }) {
 
 		return await query({
 			query: `
-			mutation Insert($people: [training_people_insert!]!){
+			mutation Insert($people: [training_people_insert_input!]!){
 				training {
 					people_insert(people: $people){
-						${fields}
+						${ fields }
 					}
 				}
 			}

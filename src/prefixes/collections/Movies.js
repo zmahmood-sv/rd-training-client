@@ -8,14 +8,14 @@ class Movies {
 	}
 
 
-	async find({ input, context, fields, headers }) {
+	async find({ input, fields, headers }) {
 
 		return await query({
 			query: `
-					query Docs ($param:training_movies_find_param){
+					query Docs ($param:training_movie_find_input){
 						training{
 							movies_find(param:$param){
-				 				${fields}
+				 				${ fields }
 							}
 						}
 					}
@@ -33,14 +33,14 @@ class Movies {
 	}
 
 
-	async remove({ input, context, fields, headers }) {
+	async remove({ input, fields, headers }) {
 
 		return await query({
 			query: `
-				mutation training($param:training_movies_remove_input){
+				mutation training($param:training_movie_remove_input){
 					training{
 						movies_remove(input:$param){
-							${fields}
+							${ fields }
 						}
 					}
 				}	
@@ -56,14 +56,14 @@ class Movies {
 
 	}
 
-	async insert({ input, context, fields, headers }) {
+	async insert({ input, fields, headers }) {
 
 		return await query({
 			query: `
-				mutation training($param:[training_movies_insert!]!){
+				mutation training($param:[training_movie_insert_input!]!){
 					training{
 						movies_insert(movies:$param){
-							${fields}
+							${ fields }
 						}
 					}
 				}	
