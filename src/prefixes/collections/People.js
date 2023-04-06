@@ -10,7 +10,7 @@ class People {
 
 		return await query({
 			query: `
-			query training($findId:training_people_find_input){
+			query training($input:training_people_find_input){
 				training{
 						people_find(input:$input){
 						${ fields }
