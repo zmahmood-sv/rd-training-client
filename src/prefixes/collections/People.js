@@ -57,7 +57,7 @@ class People {
 
 		return await query({
 			query: `
-			mutation Insert($people: [training_people_insert_input!]!){
+			mutation Insert($input: [training_people_insert_input!]!){
 				training {
 					people_insert(input: $input){
 						${ fields }
