@@ -12,16 +12,16 @@ class Movies {
 
 		return await query({
 			query: `
-					query Docs ($param:training_movie_find_input){
+					query Docs ($input:training_movie_find_input){
 						training{
-							movies_find(param:$param){
+							movies_find(input:$input){
 				 				${ fields }
 							}
 						}
 					}
 			`,
 			variables: {
-				param: input
+				input
 			},
 			url: this._graphurl,
 			headers,
@@ -37,16 +37,16 @@ class Movies {
 
 		return await query({
 			query: `
-				mutation training($param:training_movie_remove_input){
+				mutation training($input:training_movie_remove_input){
 					training{
-						movies_remove(input:$param){
+						movies_remove(input:$input){
 							${ fields }
 						}
 					}
 				}	
 			`,
 			variables: {
-				param: input
+				input
 			},
 			url: this._graphurl,
 			headers,
@@ -60,16 +60,16 @@ class Movies {
 
 		return await query({
 			query: `
-				mutation training($param:[training_movie_insert_input!]!){
+				mutation training($input:[training_movie_insert_input!]!){
 					training{
-						movies_insert(movies:$param){
+						movies_insert(input:$input){
 							${ fields }
 						}
 					}
 				}	
 			`,
 			variables: {
-				param: input
+				input
 			},
 			url: this._graphurl,
 			headers,

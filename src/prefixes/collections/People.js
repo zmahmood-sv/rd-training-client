@@ -12,13 +12,13 @@ class People {
 			query: `
 			query training($findId:training_people_find_input){
 				training{
-						people_find(param:$findId){
+						people_find(input:$input){
 						${ fields }
 					}
 				}
 			}`,
 			variables: {
-				param: input
+				input
 			},
 			url: this._graphurl,
 			headers,
@@ -33,16 +33,16 @@ class People {
 
 		return await query({
 			query: `
-			mutation training($param:training_people_remove_input){
+			mutation training($input:training_people_remove_input){
 				training{
-					people_remove(input:$param){
+					people_remove(input:$input){
 						${ fields }
 					}
 				}
 			}	
 			`,
 			variables: {
-				param: input
+				input
 			},
 			url: this._graphurl,
 			headers,
@@ -59,14 +59,14 @@ class People {
 			query: `
 			mutation Insert($people: [training_people_insert_input!]!){
 				training {
-					people_insert(people: $people){
+					people_insert(input: $input){
 						${ fields }
 					}
 				}
 			}
 			`,
 			variables: {
-				param: input
+				input
 			},
 			url: this._graphurl,
 			headers,
